@@ -4,7 +4,7 @@
 <head><title>Push SVN commit messages to JIRA</title></head>
 <body>
 <h1>Push SVN commit messages to JIRA</h1>
-Version: 0.1.1
+Version: 0.1.2
 
 <h3>What is it?</h3>
 
@@ -32,10 +32,10 @@ In order to use svnkit-logdir you have to patch and recompile the plugin.
 
 <ol>
 <li>
-Get <a href="svnkit-logdir-0.1.1.jar">svnkit-logdir-0.1.1.jar</a> and install it into your local Maven repository:
-<pre>mvn install:install-file -DgroupId=de.businessacts -DartifactId=svnkit-logdir -Dversion=0.1.1 -Dpackaging=jar -Dfile=/path/to/svnkit-logdir-0.1.1.jar
+Get <a href="svnkit-logdir-0.1.2.jar">svnkit-logdir-0.1.2.jar</a> and install it into your local Maven repository:
+<pre>mvn install:install-file -DgroupId=de.businessacts -DartifactId=svnkit-logdir -Dversion=0.1.2 -Dpackaging=jar -Dfile=/path/to/svnkit-logdir-0.1.2.jar
 </pre>
-Of course you can also compile svnkit-logdir from source (<a href="svnkit-logdir-0.1.1-src.zip">zip</a>, <a href="svnkit-logdir-0.1.1-src.tgz">tgz</a> or <a href="git://github.com/smu01/svnkit-logdir.git">git</a>).
+Of course you can also compile svnkit-logdir from source (<a href="svnkit-logdir-0.1.2-src.zip">zip</a>, <a href="svnkit-logdir-0.1.2-src.tgz">tgz</a> or <a href="git://github.com/smu01/svnkit-logdir.git">git</a>).
 </li> 
 <li>Get plugin source code (see <a href="http://confluence.atlassian.com/display/JIRAEXT/JIRA+Subversion+plugin">Atlassian JIRA Subversion Plugin page</a>)</li>
 <li>Patch plugin source code with <a href="foo.patch">foo.patch</a>, using your favorite patch utility (e.g. <a href="http://tortoisesvn.tigris.org/">TortoiseSVN</a> on Windows)</li>
@@ -47,7 +47,7 @@ Compile and package the plugin: <pre>mvn package</pre>
 <h3>Install Instructions</h3>
 
 <ol>
-<li>Additionally to the plugin's original install instructions, copy <a href="svnkit-logdir-0.1.1.jar">svnkit-logdir-0.1.1.jar</a> to JIRA's WEB-INF/lib directory.</li>
+<li>Additionally to the plugin's original install instructions, copy <a href="svnkit-logdir-0.1.2.jar">svnkit-logdir-0.1.2.jar</a> to JIRA's WEB-INF/lib directory.</li>
 <li>In the same directory, replace the original plugin JAR with the patched one from above.</li>
 <li>Add a new repository to JIRA with the repository root set to <em>logdir:///path/to/svnlogs</em></li>
 <li>
