@@ -1,0 +1,39 @@
+Index: pom.xml
+===================================================================
+--- pom.xml	(revision 29672)
++++ pom.xml	(working copy)
+@@ -141,6 +141,12 @@
+             <scope>compile</scope>
+         </dependency>
+         <dependency>
++            <groupId>de.businessacts</groupId>
++            <artifactId>svnkit-logdir</artifactId>
++            <version>0.1.2</version>
++            <scope>compile</scope>
++        </dependency>
++        <dependency>
+             <groupId>com.trilead</groupId>
+             <artifactId>trilead-ssh2</artifactId>
+             <version>build213-svnkit-1.2-patch</version>
+Index: src/main/java/com/atlassian/jira/plugin/ext/subversion/MultipleSubversionRepositoryManagerImpl.java
+===================================================================
+--- src/main/java/com/atlassian/jira/plugin/ext/subversion/MultipleSubversionRepositoryManagerImpl.java	(revision 29672)
++++ src/main/java/com/atlassian/jira/plugin/ext/subversion/MultipleSubversionRepositoryManagerImpl.java	(working copy)
+@@ -11,6 +11,9 @@
+ import com.atlassian.jira.propertyset.JiraPropertySetFactory;
+ import com.atlassian.jira.security.PermissionManager;
+ import com.opensymphony.module.propertyset.PropertySet;
++
++import de.businessacts.svnkit.logdir.LogDirSVNRepositoryFactory;
++
+ import org.apache.log4j.Logger;
+ import org.tmatesoft.svn.core.internal.io.dav.DAVRepositoryFactory;
+ import org.tmatesoft.svn.core.internal.io.fs.FSRepositoryFactory;
+@@ -62,6 +65,7 @@
+         DAVRepositoryFactory.setup();
+         SVNRepositoryFactoryImpl.setup();
+         FSRepositoryFactory.setup();
++        LogDirSVNRepositoryFactory.setup();
+ 
+         managerMap = loadSvnManagers();
+ 
