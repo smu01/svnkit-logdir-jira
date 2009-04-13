@@ -73,8 +73,10 @@ Compile and package the plugin: <pre>mvn package</pre>
 <h3>Install Instructions</h3>
 
 <ol>
+<li>Download the original plugin from the <a href="http://confluence.atlassian.com/display/JIRAEXT/JIRA+Subversion+plugin">Atlassian JIRA Subversion Plugin page</a> and install it according to the plugin's install instructions.</li>
 <li>Additionally to the plugin's original install instructions, copy <a href="#svnkit-download">svnkit-logdir-0.1.2.jar</a> to JIRA's WEB-INF/lib directory.</li>
-<li>In the same directory, replace the original plugin JAR with the patched one.</li>
+<li>In the same directory, replace the original plugin JAR (e.g. atlassian-jira-subversion-plugin-0.10.x.y) with a patched one (e.g. atlassian-jira-subversion-<em>logdir</em>-plugin-0.10.x.y.jar)</li>
+<li>Restart JIRA</li>
 <li>Add a new repository to JIRA with the repository root set to <em>logdir:///path/to/svnlogs</em></li>
 <li>
 Configure your Subversion server to copy the commit messages to your JIRA server, e.g. from inside a post-commit hook script.
@@ -164,12 +166,27 @@ done
 <tr><td>0.10.4.2</td><td><a href="atlassian-jira-subversion-plugin-0.10.4.2.patch">atlassian-jira-subversion-plugin-0.10.4.2.patch</a></td><td><a href="atlassian-jira-subversion-logdir-plugin-0.10.4.2.jar">atlassian-jira-subversion-logdir-plugin-0.10.4.2.jar</a></td></tr>
 </table>
 
+<h3>Disclaimer</h3>
+
+<p>
+The patched JIRA plugins and the JIRA plugin patches are released under the terms of the <a href="http://www.opensource.org/licenses/bsd-license.php">BSD license</a>.
+</p>
+
+<p>
+svnkit-logdir is licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+</p>
+
+<p>
+This install instruction and the example scripts are provided on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. Use at your own risk.
+</p>
+
 <h3>More</h3>
 
 <ul>
 <li>svnkit-logdir Git repository: <a href="http://github.com/smu01/svnkit-logdir/">http://github.com/smu01/svnkit-logdir/</a></li>
 <li>svnkit-logdir-jira Git repository: <a href="http://github.com/smu01/svnkit-logdir-jira/">http://github.com/smu01/svnkit-logdir-jira/</a></li>
 <li>Atlassian JIRA Subversion Plugin page: <a href="http://confluence.atlassian.com/display/JIRAEXT/JIRA+Subversion+plugin">http://confluence.atlassian.com/display/JIRAEXT/JIRA+Subversion+plugin</a></li>
+<li>Contact the author: stephan.mueller AT businessacts.de
 </ul>
 </body>
 </html>
