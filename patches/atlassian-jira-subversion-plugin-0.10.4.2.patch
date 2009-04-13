@@ -2,6 +2,15 @@ Index: pom.xml
 ===================================================================
 --- pom.xml	(revision 29683)
 +++ pom.xml	(working copy)
+@@ -7,7 +7,7 @@
+ 
+     <modelVersion>4.0.0</modelVersion>
+     <groupId>com.atlassian.jira.plugin.ext.subversion</groupId>
+-    <artifactId>atlassian-jira-subversion-plugin</artifactId>
++    <artifactId>atlassian-jira-subversion-logdir-plugin</artifactId>
+     <version>0.10.4.2</version>
+ 
+     <name>JIRA Subversion plugin</name>
 @@ -141,6 +141,12 @@
              <scope>compile</scope>
          </dependency>
